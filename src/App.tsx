@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from '@/scenes/navbar';
 import Home from '@/scenes/home';
 import Benefits from './scenes/benefits/index';
