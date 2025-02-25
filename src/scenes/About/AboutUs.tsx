@@ -11,7 +11,7 @@ const AboutUs = () => {
         setSelectedPage={() => {}}
       />
       
-     <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center py-12 px-6 mt-20">
+     <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center py-12 px-6">
        <div className="max-w-6xl w-full">
          <div className="text-center mb-16">
            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">
