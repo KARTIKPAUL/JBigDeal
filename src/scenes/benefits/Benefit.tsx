@@ -1,5 +1,6 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const childVariant = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -27,14 +28,32 @@ function Benefit({ icon, title, description }: Props) {
 
       {/* Title & Description */}
       <h4 className="font-bold">{title}</h4>
-      <p className="my-3">{description}</p>
+      <p className="my-3 text-left">{description}</p>
 
       {/* Learn More Link */}
       <AnchorLink
         className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
         href="/contact-us"
       >
-        <p>Learn more</p>
+        <Link
+            className=" text-left flex items-center gap-1 text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+            to="/contact-us"
+            >
+            <span>Learn more</span> 
+                 <svg
+                  className="w-6 h-6 text-primary-500 transform transition-transform hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+          </Link>
       </AnchorLink>
     </motion.div>
   );

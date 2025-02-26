@@ -16,7 +16,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, path, name }) => {
             <h2>{title}</h2>
           </div>
           <div className="col-12">
-            <a href="/">Home</a> <span> / </span>
+            <a href="/">Home</a>
             <a href={path}>{name}</a>
           </div>
         </div>

@@ -5,7 +5,7 @@ import HomePageGraphic from '@/assets/HomePageGraphic.png';
 import SponsorRedBull from '@/assets/SponsorRedBull.png';
 import SponsorForbes from '@/assets/SponsorForbes.png';
 import SponsorFortune from '@/assets/SponsorFortune.png';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FaArrowRight } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import Benefits from '../benefits';
 import OurClasses from '../ourClasses';
@@ -13,6 +13,7 @@ import ContactUs from '../ContactUs';
 import FindUs from '../FindUs/Findus';
 import Testimonials from '../Testimonials/Testimonilas';
 import Feedback from '@/Feedback/Feedback';
+import { Link } from 'react-router-dom';
 
 
 
@@ -63,13 +64,27 @@ function Home() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            {/* <ActionButton>Join Now</ActionButton> */}
-            <AnchorLink
-              className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-              href="#contact-us"
+           
+            <Link
+            className="flex items-center gap-1 text-sm font-bold text-primary-500 underline hover:text-secondary-500"
+            to="/contact-us"
             >
-              <p>Learn more</p>
-            </AnchorLink>
+            <span>Learn more</span> 
+                 <svg
+                  className="w-6 h-6 text-primary-500 transform transition-transform hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+          </Link>
+
           </motion.div>
         </div>
 

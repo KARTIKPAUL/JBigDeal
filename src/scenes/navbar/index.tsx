@@ -45,15 +45,7 @@ const Navbar = ({ isTopOfPage, setSelectedPage}: Props) => {
                 
                 <Link to="/features"> Features </Link>
                 <Link to="/equipments">Equpments</Link>
-                {/* <Link to="/massage-therapy"> Massage Therapy</Link> */}
-                  
-                  {/* <Dropdown
-                    buttonLabel="Help"
-                    options={[
-                      { label: "Contact", href: "/contact" },
-                      { label: "About Us", href: "/about-us" }
-                    ]}
-                  /> */}
+               
                 
                 
                               <Dropdown
@@ -106,10 +98,36 @@ const Navbar = ({ isTopOfPage, setSelectedPage}: Props) => {
 
         {/* {MENU ITEMS} */}
         <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-                  <Link to="/">Home</Link>
-                  <Link to="/benifits">Benifits</Link>
-                  <Link to="/our-class">Our Classes</Link>
-                  <Link to="/contact-us">Contact Us</Link>
+        <Link to="/">Home</Link>
+                  <Link to="/about-us">About Us</Link>
+                  <Dropdown
+                    buttonLabel="Trainers"
+                    options={[
+                      { label: "Certified Trainer", href: "/certified-trainer" },
+                      { label: "Personal Trainer", href: "/pesonal-trainer" },
+                      { label: "Yuga & Zumba Trainer", href: "/yoga-zumba-trainer" }
+                    ]}
+                  />
+                
+                <Link to="/features"> Features </Link>
+                <Link to="/equipments">Equpments</Link>
+                <Dropdown
+                                buttonLabel="Plans & Pricing"
+                                options={[
+                                  { label: "Memberships Offers", href: "/memberships" },
+                                  
+                                ]}
+                              />
+              
+                              <Dropdown
+                                buttonLabel="Workout"
+                                options={[
+                                  { label: "Zumba", href: "/workout-zumba" },
+                                  { label: "Yoga", href: "/workout-yoga" },
+                                  { label: "Suana", href: "/workout-suana" },
+                                ]}
+
+                              />
           </div>
         </div>
     )}
