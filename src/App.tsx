@@ -42,7 +42,7 @@ function App() {
           <Route path="/faqs" element={<MainFaqs />} />
           <Route path="/about-us" element={<MainAbout />} />
           <Route path="/certified-trainer" element={<CertifiedTrainers />} />
-          <Route path="/pesonal-trainer" element={<PersonalTrainer />} />
+          <Route path="/personal-trainer" element={<PersonalTrainer />} />
           <Route path="/yoga-zumba-trainer" element={<YogaAndZumba />} />
           <Route path="/features" element={<Features />} />
           <Route path="/equipments" element={<EquipmentPage />} />
