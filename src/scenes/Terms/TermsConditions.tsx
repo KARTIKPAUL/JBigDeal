@@ -2,19 +2,16 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/scenes/navbar';
 import Footer from '@/scenes/footer';
 import { SelectedPage } from '@/shared/types';
+import PageHeader from '../PageHeader/PageHeader';
 
 const TermsConditions = () => {
   return (
     <div className='app'>
-      <Navbar
-        isTopOfPage={true}
-        selectedPage={SelectedPage.Home}
-        setSelectedPage={() => {}}
-      />
-
+      
       <div className="mx-auto w-5/6 py-20">
         {/* <h1 className="text-3xl font-bold">Terms & Conditions</h1> */}
         <div className=" min-h-screen p-6">
+        <PageHeader title="Terms & Conditions" path="terms-conditions" name="Terms & Conditions"/>
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
         <h1 className="text-3xl font-bold mb-4">Terms and Conditions for JBigDeal Gym</h1>
         <p className="text-gray-700">Effective Date: 25/02/2025</p>
@@ -52,14 +49,15 @@ const TermsConditions = () => {
           <p className="text-gray-700">Email: <strong>jay@jbigdeal.org</strong></p>
           <p className="text-gray-700">Phone: <strong>+91 96796 56747</strong></p>
         </section>
-      </div>
-    </div>
         <Link to="/" className="text-primary-500 underline mt-4 inline-block">
           Back to Home
         </Link>
       </div>
+    </div>
+        
+      </div>
 
-      <Footer />
+      
     </div>
   );
 };

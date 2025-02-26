@@ -1,4 +1,4 @@
-import { ClassType, SelectedPage,  } from "@/shared/types";
+import { ClassType } from "@/shared/types";
 import image1 from "@/assets/image1.png";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
@@ -48,16 +48,10 @@ const classes: Array<ClassType> = [
   },
 ];
 
-type Props = {
-  setSelectedPage: (value: SelectedPage) => void;
-};
-
-const OurClasses = ({ setSelectedPage }: Props) => {
+const OurClasses = () => {
   return (
     <section id="ourclasses" className="w-full bg-primary-100 py-40">
-      <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}
-      >
+      <motion.div>
         <motion.div
           className="mx-auto w-5/6"
           initial="hidden"
@@ -72,7 +66,7 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           <div className="md:w-3/5">
             <HText>OUR CLASSES</HText>
             <p className="py-5">
-            Explore our diverse range of classes designed to meet your fitness goals. Whether you're looking to build strength, improve flexibility, or embark on exciting fitness adventures, we have a class for you.
+              Explore our diverse range of classes designed to meet your fitness goals. Whether you're looking to build strength, improve flexibility, or embark on exciting fitness adventures, we have a class for you.
             </p>
           </div>
         </motion.div>

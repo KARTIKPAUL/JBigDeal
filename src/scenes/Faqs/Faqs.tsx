@@ -12,24 +12,28 @@ interface FaqItem {
 const Faqs: React.FC = () => {
   const faqData: FaqItem[] = [
     {
-      question: "What are your opening hours?",
-      answer: "We are open from 10 AM to 10 PM every day.",
+      question: "What are the gym's operating hours?",
+      answer: "Our gym is open from 5:00 AM to 10:00 PM, Monday to Saturday. We are closed on Sundays.",
     },
     {
-      question: "Do you offer home delivery?",
-      answer: "Yes, we offer home delivery within a 5km radius of our restaurant.",
+      question: "Where is JBigDeal Gym located?",
+      answer: "We are located at Arabinda Para, Falakata - 735211.",
     },
     {
-      question: "What payment methods do you accept?",
-      answer: "We accept cash, credit/debit cards, and digital wallets like Google Pay and PhonePe.",
+      question: "Do you offer a free trial?",
+      answer: "Yes! We offer a 3-day free trial for new members to experience our facilities.",
     },
     {
-      question: "Do you have vegetarian options?",
-      answer: "Yes, we have a variety of vegetarian dishes available on our menu.",
+      question: "Can I pause or cancel my membership?",
+      answer: "Yes, you can pause your membership for a valid reason (such as injury or travel). Cancellation policies depend on your membership plan.",
     },
     {
-      question: "Can I make a reservation?",
-      answer: "Yes, you can call us or use our online reservation system to book a table.",
+      question: " Do you offer personal training?",
+      answer: "Yes, we have certified personal trainers available for 1-on-1 coaching. You can book a session separately or as part of a package.",
+    },
+    {
+      question: " Are there any group classes?",
+      answer: "Yes, we offer classes for Yoga, Zumba, HIIT, and Strength Training. Check our schedule at the front desk.",
     },
   ];
 
@@ -43,7 +47,7 @@ const Faqs: React.FC = () => {
 
   return (
     <div className='app'>
-      <Navbar isTopOfPage={true} selectedPage={SelectedPage.Home} setSelectedPage={() => {}} />
+      
       <div className="pb-8 bg-customBlue1">
         <h1 className="text-orange-500 text-center text-xl font-bold py-5">Frequently Asked Questions!</h1>
         <div className="max-w-6xl mx-auto space-y-6 px-4 lg:px-8 bg-white py-8 rounded-xl">
@@ -80,7 +84,7 @@ const Faqs: React.FC = () => {
           ))}
         </div>
       </div>
-      <Footer />
+      
     </div>
   );
 };

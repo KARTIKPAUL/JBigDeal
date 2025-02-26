@@ -13,10 +13,10 @@ const Class = ({ name, description, image }: Props) => {
   return (
     <li className="relative mx-5 inline-block h-[380px] w-[450px]">
       <div className={overlayStyles}>
-        <p className="text-2xl">{name}</p>
-        <p className="mt-5">{description}</p>
+        <p className="text-2xl font-bold">{name}</p>
+        <p className="mt-5">{description || "No description available."}</p>
       </div>
-      <img alt={`${image}`} src={image} />
+      <img alt={name} src={image} />
     </li>
   );
 };

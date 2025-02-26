@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/bigDealLogo.png"
-import Link from './Link';
+//import Link from './Link';
+import { Link } from 'react-router-dom';
 import { SelectedPage } from '@/shared/types';
 import useMediaQuery from '@/hooks/useMediaQuery';
 import ActionButton from '@/shared/ActionButton';
+import Dropdown from '@/helper/Dropdown';
 
 type Props = {
   isTopOfPage: boolean;
@@ -12,7 +14,7 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 }
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
+const Navbar = ({ isTopOfPage, setSelectedPage}: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggeled] =useState<boolean>(false)
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)');
@@ -30,26 +32,50 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
         {isAboveMediumScreens ?(<div
         className={`${flexBetween} w-full`}>
           <div className={`${flexBetween} gap-8 text-sm`}>
-                  <Link 
-                    page="Home"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
+                  <Link to="/">Home</Link>
+                  <Link to="/about-us">About Us</Link>
+                  <Dropdown
+                    buttonLabel="Trainers"
+                    options={[
+                      { label: "Certified Trainer", href: "/certified-trainer" },
+                      { label: "Personal Trainer", href: "/pesonal-trainer" },
+                      { label: "Yuga & Zumba Trainer", href: "/yoga-zumba-trainer" }
+                    ]}
                   />
-                  <Link
-                    page="Benefits"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  <Link
-                    page="Our Classes"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
-                  <Link
-                    page="Contact Us"
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                  />
+                
+                <Link to="/features"> Features </Link>
+                <Link to="/equipments">Equpments</Link>
+                {/* <Link to="/massage-therapy"> Massage Therapy</Link> */}
+                  
+                  {/* <Dropdown
+                    buttonLabel="Help"
+                    options={[
+                      { label: "Contact", href: "/contact" },
+                      { label: "About Us", href: "/about-us" }
+                    ]}
+                  /> */}
+                
+                
+                              <Dropdown
+                                buttonLabel="Plans & Pricing"
+                                options={[
+                                  { label: "Memberships Offers", href: "/memberships" },
+                                  
+                                ]}
+                              />
+              
+                              <Dropdown
+                                buttonLabel="Workout"
+                                options={[
+                                  { label: "Zumba", href: "/workout-zumba" },
+                                  { label: "Yoga", href: "/workout-yoga" },
+                                  { label: "Suana", href: "/workout-suana" },
+                                ]}
+
+                              />
+               
+     
+
           </div>
           <div className={`${flexBetween} gap-8`}>
             <p> Sign in</p>
@@ -80,26 +106,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
 
         {/* {MENU ITEMS} */}
         <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-            <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Benefits"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Our Classes"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Contact Us"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+                  <Link to="/">Home</Link>
+                  <Link to="/benifits">Benifits</Link>
+                  <Link to="/our-class">Our Classes</Link>
+                  <Link to="/contact-us">Contact Us</Link>
           </div>
         </div>
     )}

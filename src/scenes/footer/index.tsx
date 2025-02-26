@@ -1,8 +1,9 @@
 import Logo from "@/assets/bigDealLogo.png"
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-    <div className="text-gray-300 bg-gray-900 flex flex-col items-center gap-8 px-8 py-12 mt-24" id="footer">
+    <div className="text-gray-300 bg-gray-900 flex flex-col items-center gap-8 px-8 py-12" id="footer">
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Brand Section */}
         <div className="flex flex-col items-start gap-6">
@@ -43,13 +44,13 @@ const Footer = () => {
           <ul className="space-y-4">
             {['Home', 'About us', 'Privacy Policy', 'Terms Conditions','Faqs'].map((item) => (
               <li key={item}>
-                <a 
-                  href={`/${item.toLowerCase().replace(' ', '-')}`} 
+                <Link 
+                  to={`/${item.toLowerCase().replace(' ', '-')}`} 
                   className="text-gray-400 hover:text-orange-400 transition-colors text-lg font-medium relative group"
                 >
                   {item}
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full"></span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

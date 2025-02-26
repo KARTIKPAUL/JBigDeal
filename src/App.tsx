@@ -1,60 +1,57 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from '@/scenes/navbar';
-import Home from '@/scenes/home';
-import Benefits from './scenes/benefits/index';
-import { useState, useEffect } from 'react';
-import { SelectedPage } from '@/shared/types';
-import OurClasses from './scenes/ourClasses';
-import ContactUs from './scenes/ContactUs';
-import Footer from '@/scenes/footer';
-import PrivacyPolicy from './scenes/Privacy/PrivacyPolicy';
-import TermsConditions from './scenes/Terms/TermsConditions';
-import Faqs from './scenes/Faqs/Faqs';
-import AboutUs from './scenes/About/AboutUs';
+import Home from "@/scenes/home";
+
+import PrivacyPolicy from "./scenes/Privacy/PrivacyPolicy";
+import TermsConditions from "./scenes/Terms/TermsConditions";
 
 
-function MainPage() {
-  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
-  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+import Layout from "./scenes/LayOut";
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setIsTopOfPage(true);
-        setSelectedPage(SelectedPage.Home);
-      }
-      if (window.scrollY !== 0) setIsTopOfPage(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
-  return (
-    <div className='app bg-gray-20'>
-      <Navbar
-        isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      <Home setSelectedPage={setSelectedPage} />
-      <Benefits setSelectedPage={setSelectedPage} />
-      <OurClasses setSelectedPage={setSelectedPage} />
-      <ContactUs setSelectedPage={setSelectedPage} />
-      <Footer />
-    </div>
-  );
-}
+
+
+import MainContact from "./scenes/ContactUs/MainContact";
+import MainAbout from "./scenes/About/MainAbout";
+import MainFaqs from "./scenes/Faqs/MainFaqs";
+import MainClass from "./scenes/ourClasses/MainClass";
+import CertifiedTrainers from "./scenes/Triner/CertifiedTrainer";
+import PersonalTrainer from "./scenes/Triner/PersonalTrainer";
+import YogaAndZumba from "./scenes/Triner/YogaZumba";
+import Features from "./scenes/Fearures/Features";
+import EquipmentPage from "./scenes/Eqipments/Eqipments";
+import Membership from "./scenes/Memberships/Memberships";
+import ZumbaPage from "./scenes/Workout/Zumba";
+import YogaPage from "./scenes/Workout/Yoga";
+import Sauna from "./scenes/Workout/Suana";
+import ScrollToTop from "./ScroolToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/home" element={<MainPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-conditions" element={<TermsConditions />} />
-        <Route path="/faqs" element={<Faqs />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        {/* All routes nested here will render inside Layout */}
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          {/* <Route path="/benifits" element={<MainBenefits  /> } /> */}
+          <Route path="/contact-us" element={<MainContact />} />
+          <Route path="/our-class" element={<MainClass />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/faqs" element={<MainFaqs />} />
+          <Route path="/about-us" element={<MainAbout />} />
+          <Route path="/certified-trainer" element={<CertifiedTrainers />} />
+          <Route path="/pesonal-trainer" element={<PersonalTrainer />} />
+          <Route path="/yoga-zumba-trainer" element={<YogaAndZumba />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/equipments" element={<EquipmentPage />} />
+          <Route path="/memberships" element={<Membership />} />
+          <Route path="/workout-zumba" element={<ZumbaPage />} />
+          <Route path="/workout-yoga" element={<YogaPage />} />
+          <Route path="/workout-suana" element={<Sauna />} />
+          
+        </Route>
       </Routes>
     </Router>
   );
