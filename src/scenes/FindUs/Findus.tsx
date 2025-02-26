@@ -4,7 +4,7 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaInstagram,
-  FaLinkedin,
+  
   FaFacebook,
 
 } from "react-icons/fa";
