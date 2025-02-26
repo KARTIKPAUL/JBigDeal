@@ -172,13 +172,7 @@ const Navbar = ({ isTopOfPage, setSelectedPage }: Props) => {
                 >
                   Sign In
                 </Link>
-                <ActionButton
-                  setSelectedPage={setSelectedPage}
-                  onClick={handleMobileLinkClick}
-                  className="w-full py-3 text-2xl"
-                >
-                  Become a Member
-                </ActionButton>
+                <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
               </div>
             </div>
           </div>
