@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,18 +21,7 @@ const testimonials = [
     image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600",
     rating: 4,
   },
-  // {
-  //   name: "Rahul Dey",
-  //   feedback: "Great ambiance and friendly staff. Loved their desserts and quick service. Will visit again soon! There are many types of dishes. You can get dinner, lunch and snack also. You will get best biriyani of falakata here.",
-  //   image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   rating: 5,
-  // },
-  // {
-  //   name: "Sneha Roy",
-  //   feedback: "Delicious food with a cozy atmosphere. Perfect place for family gatherings. Highly recommended! There are many types of dishes. You can get dinner, lunch and snack also. You will get best biriyani of falakata here.",
-  //   image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   rating: 5,
-  // },
+  
 ];
 
 const Testimonials = () => {
@@ -64,7 +52,7 @@ const Testimonials = () => {
     ],
   };
 
-  const renderStars = (rating) => {
+  const renderStars = (rating: number) => {
     return Array(5)
       .fill(0)
       .map((_, i) => (

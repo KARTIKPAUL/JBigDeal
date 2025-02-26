@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
-import PageHeader from "../PageHeader/PageHeader";
+
 
 const ContactUs = () => {
   const inputStyles = `mb-5 w-full rounded-lg bg-primary-300

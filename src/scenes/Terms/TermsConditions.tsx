@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-import Navbar from '@/scenes/navbar';
-import Footer from '@/scenes/footer';
-import { SelectedPage } from '@/shared/types';
 import PageHeader from '../PageHeader/PageHeader';
 
 const TermsConditions = () => {

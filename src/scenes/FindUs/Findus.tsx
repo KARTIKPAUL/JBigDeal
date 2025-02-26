@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import  logo  from "../../assets/image3.png";
 
 export default function FindUs() {

@@ -1,6 +1,4 @@
-import Navbar from '@/scenes/navbar';
-import Footer from '@/scenes/footer';
-import { SelectedPage } from '@/shared/types';
+
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { useState } from 'react';
 

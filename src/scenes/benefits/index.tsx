@@ -3,7 +3,7 @@ import { BenefitType } from "@/shared/types";
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Benefit from "./Benefit";
-import ActionButton from "@/shared/ActionButton";
+
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 
 const benefits: Array<BenefitType> = [
