@@ -14,7 +14,7 @@ const Footer = () => {
             Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience.
           </p>
           <div className="flex gap-5">
-            <a href="https://www.facebook.com/p/Sweety-100064151675371/" className="hover:scale-110 transition-transform">
+            <a href="#" className="hover:scale-110 transition-transform">
               {/* <img src={assets.facebook_icon} alt="Facebook" className="w-8 h-8 hover:opacity-80" /> */}
             </a>
             <a href="#" className="hover:scale-110 transition-transform">
